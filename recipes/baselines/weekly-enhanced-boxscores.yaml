@@ -1,0 +1,23 @@
+name: weekly-enhanced-boxscores
+version: 1
+type: export
+league: 323196
+year: 2024
+weeks:
+  start: 1
+  end: 18
+out: ${DATA_ROOT}/data/seasons/2024/boxscores.csv
+flags:
+  fill_missing_slots: true
+  require_clean: true
+  tolerance: 0.0
+post:
+  validate: true
+  lineup_validate: true
+profile: active
+public_only: true
+locked: true
+notes: |
+  Public league enhanced boxscores export with slot fill and strict validation.
+  Covers full season (weeks 1-18) with comprehensive validation.
+  Use this baseline for active season data collection.

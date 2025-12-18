@@ -1,0 +1,183 @@
+[
+  {
+    "gameId": 1,
+    "id": 323196,
+    "members": [
+      {
+        "displayName": "timgeisler",
+        "id": "{193722A8-80DE-483C-95E3-DCB4B9CD29DC}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "andyaldenanderson",
+        "id": "{2C1682B5-E77E-4CE6-BAB5-0181DC1E216B}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "olsonwe",
+        "id": "{506FD794-FB5E-4EDF-ABEA-32862FDD168B}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "Tory Parsons",
+        "id": "{566AF22E-9C0E-440A-B235-6739CE5A69F3}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "Church Mouse2step",
+        "id": "{7290CEDA-1F72-4D8E-BBDB-250BD2C77187}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "Sweetride82",
+        "id": "{8A7A52AE-1894-491F-910C-4705E984FF4B}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "DaTrigs",
+        "id": "{993EA943-A216-4580-B13F-5EA5E1E8A1EB}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "du5t1n55",
+        "id": "{9D92DEF4-42EF-41A8-8CE8-150B25013519}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "thorsenk",
+        "id": "{C3FCDEE0-434E-498F-9793-E68E81750B9B}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "Ozolinsh2222",
+        "id": "{C5243737-8269-40C4-A2C0-AC1A7742BB6B}",
+        "isLeagueManager": true
+      },
+      {
+        "displayName": "xxsteve0",
+        "id": "{C5B91B9A-2332-4681-B672-D096359317DF}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "AlphaGow",
+        "id": "{CAB08E55-39AC-4390-B65C-DE8E9F790A0E}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "Pimp8302",
+        "id": "{E17ED5C1-D162-4759-8A1B-E1E0BAF98970}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "hage4411",
+        "id": "{E293F23D-C7AC-4EA2-B83C-40B63CAF1C69}",
+        "isLeagueManager": false
+      },
+      {
+        "displayName": "Justin17875",
+        "id": "{EDD28322-18D6-4885-8B13-A1E08B8EEBC6}",
+        "isLeagueManager": false
+      }
+    ],
+    "scoringPeriodId": 16,
+    "seasonId": 2011,
+    "segmentId": 0,
+    "settings": {
+      "name": "RFFL"
+    },
+    "status": {
+      "currentMatchupPeriod": 16,
+      "isActive": true,
+      "latestScoringPeriod": 19
+    },
+    "teams": [
+      {
+        "abbrev": "COCK",
+        "id": 1,
+        "owners": [
+          "{C3FCDEE0-434E-498F-9793-E68E81750B9B}"
+        ]
+      },
+      {
+        "abbrev": "GFM",
+        "id": 2,
+        "owners": [
+          "{C5243737-8269-40C4-A2C0-AC1A7742BB6B}",
+          "{993EA943-A216-4580-B13F-5EA5E1E8A1EB}"
+        ]
+      },
+      {
+        "abbrev": "2SCM",
+        "id": 3,
+        "owners": [
+          "{7290CEDA-1F72-4D8E-BBDB-250BD2C77187}",
+          "{E293F23D-C7AC-4EA2-B83C-40B63CAF1C69}"
+        ]
+      },
+      {
+        "abbrev": "BBWZ",
+        "id": 4,
+        "owners": [
+          "{E17ED5C1-D162-4759-8A1B-E1E0BAF98970}",
+          "{506FD794-FB5E-4EDF-ABEA-32862FDD168B}"
+        ]
+      },
+      {
+        "abbrev": "SWEE",
+        "id": 5,
+        "owners": [
+          "{8A7A52AE-1894-491F-910C-4705E984FF4B}"
+        ]
+      },
+      {
+        "abbrev": "PTB",
+        "id": 6,
+        "owners": [
+          "{9D92DEF4-42EF-41A8-8CE8-150B25013519}"
+        ]
+      },
+      {
+        "abbrev": "GOW",
+        "id": 7,
+        "owners": [
+          "{CAB08E55-39AC-4390-B65C-DE8E9F790A0E}"
+        ]
+      },
+      {
+        "abbrev": "KNAB",
+        "id": 8,
+        "owners": [
+          "{EDD28322-18D6-4885-8B13-A1E08B8EEBC6}"
+        ]
+      },
+      {
+        "abbrev": "AC",
+        "id": 9,
+        "owners": [
+          "{C5B91B9A-2332-4681-B672-D096359317DF}"
+        ]
+      },
+      {
+        "abbrev": "DKGG",
+        "id": 10,
+        "owners": [
+          "{566AF22E-9C0E-440A-B235-6739CE5A69F3}"
+        ]
+      },
+      {
+        "abbrev": "MJI",
+        "id": 11,
+        "owners": [
+          "{2C1682B5-E77E-4CE6-BAB5-0181DC1E216B}"
+        ]
+      },
+      {
+        "abbrev": "BBRS",
+        "id": 12,
+        "owners": [
+          "{193722A8-80DE-483C-95E3-DCB4B9CD29DC}"
+        ]
+      }
+    ]
+  }
+]

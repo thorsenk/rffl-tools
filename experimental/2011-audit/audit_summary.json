@@ -1,0 +1,187 @@
+{
+  "timestamp": "2025-12-18T09:11:59.246567",
+  "league_id": 323196,
+  "year": 2011,
+  "endpoints_tested": [
+    {
+      "name": "League History Basic",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011",
+      "status_code": 200,
+      "success": true,
+      "data_size": 2920,
+      "error": null
+    },
+    {
+      "name": "League History with Teams",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mTeam",
+      "status_code": 200,
+      "success": true,
+      "data_size": 21074,
+      "error": null
+    },
+    {
+      "name": "League History with Rosters",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mRoster",
+      "status_code": 200,
+      "success": true,
+      "data_size": 285827,
+      "error": null
+    },
+    {
+      "name": "League History with Transactions",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mTransactions",
+      "status_code": 200,
+      "success": true,
+      "data_size": 3918,
+      "error": null
+    },
+    {
+      "name": "League History with Schedule",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mSchedule",
+      "status_code": 200,
+      "success": true,
+      "data_size": 1370,
+      "error": null
+    },
+    {
+      "name": "League History with Settings",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mSettings",
+      "status_code": 200,
+      "success": true,
+      "data_size": 8010,
+      "error": null
+    },
+    {
+      "name": "League History with Standings",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mStandings",
+      "status_code": 200,
+      "success": true,
+      "data_size": 15920,
+      "error": null
+    },
+    {
+      "name": "League History with Draft",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mDraftDetail",
+      "status_code": 200,
+      "success": true,
+      "data_size": 65123,
+      "error": null
+    },
+    {
+      "name": "League History Combined Views",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mTeam&view=mRoster&view=mSchedule&view=mSettings",
+      "status_code": 200,
+      "success": true,
+      "data_size": 312025,
+      "error": null
+    },
+    {
+      "name": "Modern Season Endpoint",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2011/segments/0/leagues/323196",
+      "status_code": 404,
+      "success": false,
+      "data_size": 0,
+      "error": "HTTP 404: {\"messages\":[\"Not Found\"],\"details\":[{\"message\":\"Not Found\",\"shortMessage\":\"Not Found\",\"resolution\":null,\"type\":\"GENERAL_NOT_FOUND\",\"metaData\":null}]}"
+    },
+    {
+      "name": "Modern with Teams",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2011/segments/0/leagues/323196?view=mTeam",
+      "status_code": 404,
+      "success": false,
+      "data_size": 0,
+      "error": "HTTP 404: {\"messages\":[\"Not Found\"],\"details\":[{\"message\":\"Not Found\",\"shortMessage\":\"Not Found\",\"resolution\":null,\"type\":\"GENERAL_NOT_FOUND\",\"metaData\":null}]}"
+    }
+  ],
+  "successful": [
+    {
+      "name": "League History Basic",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011",
+      "status_code": 200,
+      "success": true,
+      "data_size": 2920,
+      "error": null
+    },
+    {
+      "name": "League History with Teams",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mTeam",
+      "status_code": 200,
+      "success": true,
+      "data_size": 21074,
+      "error": null
+    },
+    {
+      "name": "League History with Rosters",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mRoster",
+      "status_code": 200,
+      "success": true,
+      "data_size": 285827,
+      "error": null
+    },
+    {
+      "name": "League History with Transactions",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mTransactions",
+      "status_code": 200,
+      "success": true,
+      "data_size": 3918,
+      "error": null
+    },
+    {
+      "name": "League History with Schedule",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mSchedule",
+      "status_code": 200,
+      "success": true,
+      "data_size": 1370,
+      "error": null
+    },
+    {
+      "name": "League History with Settings",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mSettings",
+      "status_code": 200,
+      "success": true,
+      "data_size": 8010,
+      "error": null
+    },
+    {
+      "name": "League History with Standings",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mStandings",
+      "status_code": 200,
+      "success": true,
+      "data_size": 15920,
+      "error": null
+    },
+    {
+      "name": "League History with Draft",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mDraftDetail",
+      "status_code": 200,
+      "success": true,
+      "data_size": 65123,
+      "error": null
+    },
+    {
+      "name": "League History Combined Views",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/323196?seasonId=2011&view=mTeam&view=mRoster&view=mSchedule&view=mSettings",
+      "status_code": 200,
+      "success": true,
+      "data_size": 312025,
+      "error": null
+    }
+  ],
+  "failed": [
+    {
+      "name": "Modern Season Endpoint",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2011/segments/0/leagues/323196",
+      "status_code": 404,
+      "success": false,
+      "data_size": 0,
+      "error": "HTTP 404: {\"messages\":[\"Not Found\"],\"details\":[{\"message\":\"Not Found\",\"shortMessage\":\"Not Found\",\"resolution\":null,\"type\":\"GENERAL_NOT_FOUND\",\"metaData\":null}]}"
+    },
+    {
+      "name": "Modern with Teams",
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2011/segments/0/leagues/323196?view=mTeam",
+      "status_code": 404,
+      "success": false,
+      "data_size": 0,
+      "error": "HTTP 404: {\"messages\":[\"Not Found\"],\"details\":[{\"message\":\"Not Found\",\"shortMessage\":\"Not Found\",\"resolution\":null,\"type\":\"GENERAL_NOT_FOUND\",\"metaData\":null}]}"
+    }
+  ]
+}

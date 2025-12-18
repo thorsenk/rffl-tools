@@ -1,0 +1,23 @@
+name: playoffs-preview
+version: 1
+type: export
+league: 323196
+year: 2024
+weeks:
+  start: 15
+  end: 17
+out: ${DATA_ROOT}/data/seasons/2024/playoffs_boxscores.csv
+flags:
+  fill_missing_slots: true
+  require_clean: true
+  tolerance: 0.0
+post:
+  validate: true
+  lineup_validate: true
+profile: preview
+public_only: true
+locked: true
+notes: |
+  Playoff weeks preview export (weeks 15-17).
+  Use for playoff analysis and championship tracking.
+  Includes slot fill and validation for playoff data.

@@ -1,0 +1,56 @@
+# Build artifacts (user-specific, regenerable)
+build/recipes/*/
+build/exports/*/
+
+# Keep directory structure
+!build/recipes/.gitkeep
+!build/exports/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+dist/
+build/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Data files (large CSV files - consider using Git LFS if needed)
+# Uncomment the line below if you want to exclude data from version control
+# data/seasons/*/*.csv
+# data/seasons/*/reports/*.csv
+

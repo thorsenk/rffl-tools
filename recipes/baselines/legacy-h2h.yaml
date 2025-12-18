@@ -1,0 +1,20 @@
+name: legacy-h2h
+version: 1
+type: h2h
+league: 323196
+year: 2018
+weeks:
+  start: 1
+  end: 16
+out: ${DATA_ROOT}/data/seasons/2018/h2h.csv
+flags: {}
+post:
+  validate: true
+  lineup_validate: false
+profile: active
+public_only: true
+locked: true
+notes: |
+  Legacy head-to-head matchup export for pre-2019 seasons.
+  Use for seasons where per-player boxscores aren't reliable.
+  Covers regular season weeks 1-16.

@@ -1,0 +1,22 @@
+name: week-6-korm-2025
+version: 1
+type: export
+league: 323196
+year: 2025
+weeks:
+  start: 6
+  end: 6
+out: ${DATA_ROOT}/data/seasons/2025/boxscores.csv
+flags:
+  fill_missing_slots: true
+  require_clean: true
+  tolerance: 0.0
+post:
+  validate: true
+  lineup_validate: true
+profile: active
+public_only: true
+locked: false
+notes: |
+  Week 6 KORM update for 2025 season.
+  Enhanced boxscores export with slot fill and strict validation.

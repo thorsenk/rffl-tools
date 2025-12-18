@@ -1,0 +1,17 @@
+name: draft
+version: 1
+type: draft
+league: 323196
+year: 2024
+out: ${DATA_ROOT}/data/seasons/2024/draft.csv
+flags: {}
+post:
+  validate: true
+  lineup_validate: false
+profile: active
+public_only: true
+locked: true
+notes: |
+  Draft results export for the specified season.
+  Exports all draft picks with team, player, and bid information.
+  No week range needed for draft data.
