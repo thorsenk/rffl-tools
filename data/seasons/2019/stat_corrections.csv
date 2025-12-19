@@ -1,0 +1,45 @@
+season_year,week,player_id,player_name,team_id,team_code,stat_id,stat_name,original_value,corrected_value,points_impact,correction_date,rffl_team_code
+2019,1,,Broncos D/STDenD/ST,,,,Assisted Tackles (TKA),2,,,,CHLK
+2019,1,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),1,,,,PITB
+2019,1,,Jaguars D/STJaxD/ST,,,,Assisted Tackles (TKA),4,,,,JAGB
+2019,2,,Keenan AllenLACWR,,,,Receptions (REC),5,,,,SSBB
+2019,2,,Broncos D/STDenD/ST,,,,Assisted Tackles (TKA),2,,,,CHLK
+2019,2,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),2,,,,PITB
+2019,2,,Chargers D/STLACD/ST,,,,Each Interception (INT),3,,,,MRYJ
+2019,2,,Jaguars D/STJaxD/ST,,,,Passes Defensed (PD),1,,,,JAGB
+2019,3,,Cowboys D/STDalD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2019,3,,Titans D/STTenD/ST,,,,Assisted Tackles (TKA),2,,,,PCX
+2019,3,,Patriots D/STNED/ST,,,,Assisted Tackles (TKA),3,,,,MXLB
+2019,3,,Chargers D/STLACD/ST,,,,Assisted Tackles (TKA),-2,,,,MRYJ
+2019,3,,Panthers D/STCarD/ST,,,,Assisted Tackles (TKA),2,,,,CHLK
+2019,4,,Colts D/STIndD/ST,,,,Assisted Tackles (TKA),2,,,,CHLK
+2019,4,,Chargers D/STLACD/ST,,,,Assisted Tackles (TKA),2,,,,MRYJ
+2019,5,,Titans D/STTenD/ST,,,,Fumble or INT Return for TD (TD),-1,,,,PCX
+2019,5,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2019,6,,Bears D/STChiD/ST,,,,Each Sack (SCK),1,,,,WZRD
+2019,6,,Patriots D/STNED/ST,,,,Assisted Tackles (TKA),3,,,,MXLB
+2019,8,,Bears D/STChiD/ST,,,,Assisted Tackles (TKA),2,,,,WZRD
+2019,8,,Broncos D/STDenD/ST,,,,Assisted Tackles (TKA),3,,,,CHLK
+2019,9,,Cowboys D/STDalD/ST,,,,Blocked Punt or FG return for TD (BLKKRTD),1,,,,SSBB
+2019,9,,Broncos D/STDenD/ST,,,,Passes Defensed (PD),1,,,,CHLK
+2019,9,,Vikings D/STMinD/ST,,,,Assisted Tackles (TKA),2,,,,BRIM
+2019,9,,Saints D/STNOD/ST,,,,Assisted Tackles (TKA),1,,,,PCX
+2019,10,,Bears D/STChiD/ST,,,,Passes Defensed (PD),-1,,,,WZRD
+2019,10,,Saints D/STNOD/ST,,,,Assisted Tackles (TKA),2,,,,PCX
+2019,10,,Seahawks D/STSeaD/ST,,,,Assisted Tackles (TKA),2,,,,PITB
+2019,11,,Bills D/STBufD/ST,,,,Assisted Tackles (TKA),-2,,,,CHLK
+2019,11,,Rams D/STLARD/ST,,,,Assisted Tackles (TKA),3,,,,DKEG
+2019,11,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),1,,,,PITB
+2019,11,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2019,12,,Browns D/STCleD/ST,,,,Assisted Tackles (TKA),1,,,,JAGB
+2019,12,,Rams D/STLARD/ST,,,,Assisted Tackles (TKA),2,,,,DKEG
+2019,12,,Steelers D/STPitD/ST,,,,Passes Defensed (PD),1,,,,PITB
+2019,12,,49ers D/STSFD/ST,,,,Each Fumble Forced (FF),-1,,,,GFM
+2019,13,,Cowboys D/STDalD/ST,,,,Assisted Tackles (TKA),2,,,,JAGB
+2019,13,,Vikings D/STMinD/ST,,,,Each Fumble Recovered (FR),-1,,,,BRIM
+2019,14,,Vikings D/STMinD/ST,,,,Passes Defensed (PD),-1,,,,BRIM
+2019,14,,Saints D/STNOD/ST,,,,Passes Defensed (PD),-1,,,,PCX
+2019,14,,Eagles D/STPhiD/ST,,,,Each Fumble Forced (FF),-1,,,,GFM
+2019,14,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),-2,,,,PITB
+2019,15,,Packers D/STGBD/ST,,,,Assisted Tackles (TKA),2,,,,SSBB
+2019,15,,Patriots D/STNED/ST,,,,Assisted Tackles (TKA),1,,,,MXLB

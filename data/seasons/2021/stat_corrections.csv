@@ -1,0 +1,46 @@
+season_year,week,player_id,player_name,team_id,team_code,stat_id,stat_name,original_value,corrected_value,points_impact,correction_date,rffl_team_code
+2021,1,,Broncos D/STDenD/ST,,,,Assisted Tackles (TKA),2,,,,PCX
+2021,1,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),1,,,,PITB
+2021,1,,49ers D/STSFD/ST,,,,Passes Defensed (PD),1,,,,TACT
+2021,1,,Commanders D/STWshD/ST,,,,Passes Defensed (PD),1,,,,SSBB
+2021,2,,Keenan AllenLACWR,,,,Receptions (REC),5,,,,CHLK
+2021,2,,Tyler ConklinLACTE,,,,Team Win (TW),1,,,,BRIM
+2021,2,,Justin HerbertLACQB,,,,Each Pass Attempted (A),27,,,,SSBB
+2021,2,,Najee HarrisLACRBIR,,,,Rushing Attempts (CAR),8,,,,PCX
+2021,2,,Bills D/STBufD/ST,,,,Passes Defensed (PD),1,,,,CHLK
+2021,2,,Broncos D/STDenD/ST,,,,Assisted Tackles (TKA),2,,,,PCX
+2021,2,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),2,,,,PITB
+2021,3,,Robert TonyanKCTE,,,,Team Win (TW),1,,,,SSBB
+2021,3,,Titans D/STTenD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2021,3,,Raiders D/STLVD/ST,,,,Assisted Tackles (TKA),2,,,,JAGB
+2021,3,,Patriots D/STNED/ST,,,,Assisted Tackles (TKA),3,,,,WZRD
+2021,3,,Panthers D/STCarD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2021,4,,Colts D/STIndD/ST,,,,Assisted Tackles (TKA),2,,,,WZRD
+2021,4,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,TACT
+2021,5,,Titans D/STTenD/ST,,,,Fumble or INT Return for TD (TD),-1,,,,GFM
+2021,5,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,TACT
+2021,6,,Baker MayfieldTBQB,,,,40+ yard TD pass bonus (PTD40),-1,,,,MXLB
+2021,8,,Broncos D/STDenD/ST,,,,Assisted Tackles (TKA),3,,,,PCX
+2021,8,,Buccaneers D/STTBD/ST,,,,Assisted Tackles (TKA),2,,,,MXLB
+2021,8,,Ravens D/STBalD/ST,,,,Assisted Tackles (TKA),-1,,,,BRIM
+2021,9,,Cowboys D/STDalD/ST,,,,Blocked Punt or FG return for TD (BLKKRTD),1,,,,MRYJ
+2021,9,,Broncos D/STDenD/ST,,,,Passes Defensed (PD),1,,,,PCX
+2021,9,,Vikings D/STMinD/ST,,,,Assisted Tackles (TKA),2,,,,WZRD
+2021,9,,Saints D/STNOD/ST,,,,Assisted Tackles (TKA),1,,,,LNO
+2021,10,,Saints D/STNOD/ST,,,,Assisted Tackles (TKA),2,,,,LNO
+2021,11,,Bills D/STBufD/ST,,,,Assisted Tackles (TKA),-2,,,,CHLK
+2021,11,,Browns D/STCleD/ST,,,,Assisted Tackles (TKA),-2,,,,LNO
+2021,11,,Titans D/STTenD/ST,,,,Assisted Tackles (TKA),1,,,,JAGB
+2021,11,,Rams D/STLARD/ST,,,,Assisted Tackles (TKA),3,,,,GFM
+2021,11,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),1,,,,PITB
+2021,11,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,PCX
+2021,12,,Browns D/STCleD/ST,,,,Assisted Tackles (TKA),1,,,,LNO
+2021,12,,Colts D/STIndD/ST,,,,Assisted Tackles (TKA),-2,,,,PCX
+2021,12,,Rams D/STLARD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2021,13,,Cowboys D/STDalD/ST,,,,Assisted Tackles (TKA),2,,,,MRYJ
+2021,13,,Colts D/STIndD/ST,,,,Assisted Tackles (TKA),2,,,,PCX
+2021,13,,Vikings D/STMinD/ST,,,,Each Fumble Recovered (FR),-1,,,,WZRD
+2021,13,,Buccaneers D/STTBD/ST,,,,Assisted Tackles (TKA),2,,,,MXLB
+2021,15,,Packers D/STGBD/ST,,,,Assisted Tackles (TKA),2,,,,SSBB
+2021,15,,Colts D/STIndD/ST,,,,Passes Defensed (PD),1,,,,PCX
+2021,15,,Patriots D/STNED/ST,,,,Assisted Tackles (TKA),1,,,,PITB

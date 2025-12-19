@@ -203,6 +203,58 @@ def cmd_transactions(
     console.print(f"[green]✅ Wrote {path}[/green]")
 
 
+@core_app.command("stat-corrections")
+def cmd_stat_corrections(
+    league: int | None = typer.Option(None, help="ESPN leagueId (defaults to $LEAGUE)"),
+    year: int = typer.Option(..., help="Season year"),
+    week: int | None = typer.Option(None, help="Specific week (defaults to all weeks 1-18)"),
+    out: str = typer.Option(None, help="Output CSV path"),
+):
+    """Export stat corrections history (requires authentication)."""
+    league_id = league
+    if league_id is None:
+        env_league = os.getenv("LEAGUE")
+        if env_league and env_league.isdigit():
+            league_id = int(env_league)
+    if league_id is None:
+        console.print("[red]❌ Missing league id. Pass --league or set $LEAGUE in .env[/red]")
+        raise typer.Exit(1)
+
+    try:
+        from .core.stat_corrections import export_stat_corrections
+
+        credentials = ESPNCredentials(
+            espn_s2=os.getenv("ESPN_S2"),
+            swid=os.getenv("SWID"),
+        )
+        
+        if not credentials.is_authenticated:
+            console.print(
+                "[red]❌ Stat corrections require authentication. Set ESPN_S2 and SWID in .env[/red]"
+            )
+            raise typer.Exit(1)
+
+        repo_root = find_repo_root()
+        output_path = resolve_output_path(out or f"data/seasons/{year}/stat_corrections.csv")
+        
+        start_week = week if week else 1
+        end_week = week if week else 18
+        
+        path = export_stat_corrections(
+            league_id=league_id,
+            year=year,
+            output_path=output_path,
+            credentials=credentials,
+            start_week=start_week,
+            end_week=end_week,
+        )
+    except Exception as e:
+        console.print(f"[red]❌ Stat corrections export failed: {e}[/red]")
+        raise typer.Exit(1)
+
+    console.print(f"[green]✅ Wrote {path}[/green]")
+
+
 @core_app.command("historical-rosters")
 def cmd_historical_rosters(
     league: int | None = typer.Option(None, help="ESPN leagueId (defaults to $LEAGUE)"),

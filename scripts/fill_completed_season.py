@@ -59,6 +59,7 @@ def fill_completed_season(
     skip_draft: bool = False,
     skip_boxscores: bool = False,
     skip_transactions: bool = False,
+    skip_stat_corrections: bool = False,
 ) -> bool:
     """
     Fill out a completed season by exporting data from ESPN API.
@@ -237,6 +238,55 @@ def fill_completed_season(
     elif skip_transactions:
         console.print("[yellow]⏭️  Skipping transactions export[/yellow]\n")
 
+    # Export stat corrections (2019+ only, optional, requires auth)
+    if not skip_stat_corrections and not is_historical:
+        stat_corrections_path = season_dir / "stat_corrections.csv"
+        cmd = [
+            "rffl",
+            "core",
+            "stat-corrections",
+            "--year",
+            str(year),
+            "--out",
+            str(stat_corrections_path),
+        ]
+        if league_id:
+            cmd.extend(["--league", str(league_id)])
+
+        # Check if credentials are available
+        has_credentials = bool(os.getenv("ESPN_S2") and os.getenv("SWID"))
+        if has_credentials:
+            console.print(
+                "[dim]   Using ESPN_S2 and SWID credentials from environment[/dim]"
+            )
+
+        if not run_command(cmd, f"Exporting stat corrections for {year}"):
+            # Don't fail the whole process if stat corrections fail
+            if not has_credentials:
+                console.print(
+                    "[yellow]⚠️  Stat corrections export failed (authentication required)[/yellow]"
+                )
+                console.print(
+                    "[yellow]   Set ESPN_S2 and SWID environment variables to authenticate[/yellow]"
+                )
+            else:
+                console.print(
+                    "[yellow]⚠️  Stat corrections export failed (data may not be available for this week/season)[/yellow]"
+                )
+            console.print(
+                "[yellow]   This is optional - continuing with other exports...[/yellow]\n"
+            )
+        else:
+            console.print(
+                f"[green]✅ Stat corrections exported: {stat_corrections_path}[/green]\n"
+            )
+    elif is_historical and not skip_stat_corrections:
+        console.print(
+            "[yellow]⏭️  Skipping stat corrections export (not available for historical seasons)[/yellow]\n"
+        )
+    elif skip_stat_corrections:
+        console.print("[yellow]⏭️  Skipping stat corrections export[/yellow]\n")
+
     # Summary
     if success:
         console.print("[bold green]✨ Season export completed successfully![/bold green]\n")
@@ -351,10 +401,11 @@ Note: Historical seasons (2011-2018) automatically skip boxscores and transactio
             require_clean=not args.no_require_clean,
             start_week=args.start_week,
             end_week=args.end_week,
-            skip_draft=args.skip_draft,
-            skip_boxscores=args.skip_boxscores,
-            skip_transactions=args.skip_transactions,
-        )
+        skip_draft=args.skip_draft,
+        skip_boxscores=args.skip_boxscores,
+        skip_transactions=args.skip_transactions,
+        skip_stat_corrections=args.skip_stat_corrections,
+    )
         sys.exit(0 if success else 1)
     except KeyboardInterrupt:
         console.print("\n[yellow]Cancelled by user[/yellow]")

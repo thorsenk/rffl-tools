@@ -1,0 +1,46 @@
+season_year,week,player_id,player_name,team_id,team_code,stat_id,stat_name,original_value,corrected_value,points_impact,correction_date,rffl_team_code
+2023,1,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),1,,,,MRYJ
+2023,1,,49ers D/STSFD/ST,,,,Passes Defensed (PD),1,,,,MXLB
+2023,1,,Commanders D/STWshD/ST,,,,Passes Defensed (PD),1,,,,PCX
+2023,1,,Jaguars D/STJaxD/ST,,,,Assisted Tackles (TKA),4,,,,CHLK
+2023,2,,Keenan AllenLACWR,,,,Receptions (REC),5,,,,TACT
+2023,2,,Geno SmithLVQB,,,,Each Pass Attempted (A),43,,,,MRYJ
+2023,2,,Cameron DickerLACK,,,,FG Made (0-39 yards) (FG39),2,,,,MRYJ
+2023,2,,Daniel CarlsonLVK,,,,FG Made (50+ yards) (FG50+),1,,,,BRIM
+2023,2,,Quentin JohnstonLACWRQ,,,,Rushing Attempts (CAR),1,,,,MXLB
+2023,2,,Justin HerbertLACQB,,,,Each Pass Attempted (A),27,,,,MRYJ
+2023,2,,Najee HarrisLACRBIR,,,,Rushing Attempts (CAR),8,,,,SSBB
+2023,2,,Bills D/STBufD/ST,,,,Passes Defensed (PD),1,,,,TACT
+2023,2,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),2,,,,MRYJ
+2023,2,,Jaguars D/STJaxD/ST,,,,Passes Defensed (PD),1,,,,CHLK
+2023,3,,Cowboys D/STDalD/ST,,,,Assisted Tackles (TKA),2,,,,PKMC
+2023,3,,Chiefs D/STKCD/ST,,,,Assisted Tackles (TKA),2,,,,CHLK
+2023,3,,Patriots D/STNED/ST,,,,Assisted Tackles (TKA),3,,,,SSBB
+2023,3,,Jets D/STNYJD/ST,,,,Assisted Tackles (TKA),2,,,,BRIM
+2023,4,,Chiefs D/STKCD/ST,,,,Each Sack (SCK),-1,,,,CHLK
+2023,4,,Eagles D/STPhiD/ST,,,,Passes Defensed (PD),1,,,,GFM
+2023,4,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,MXLB
+2023,5,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,MXLB
+2023,7,,Jets D/STNYJD/ST,,,,Assisted Tackles (TKA),1,,,,BRIM
+2023,8,,Quentin JohnstonLACWRQ,,,,Team Win (TW),1,,,,MXLB
+2023,8,,Buccaneers D/STTBD/ST,,,,Assisted Tackles (TKA),2,,,,LNO
+2023,8,,Ravens D/STBalD/ST,,,,Assisted Tackles (TKA),-1,,,,JAGB
+2023,9,,Falcons D/STAtlD/ST,,,,Assisted Tackles (TKA),2,,,,LNO
+2023,9,,Cowboys D/STDalD/ST,,,,Blocked Punt or FG return for TD (BLKKRTD),1,,,,PKMC
+2023,9,,Vikings D/STMinD/ST,,,,Assisted Tackles (TKA),2,,,,MXLB
+2023,9,,Saints D/STNOD/ST,,,,Assisted Tackles (TKA),1,,,,WZRD
+2023,9,,Chargers D/STLACD/ST,,,,7-13 points allowed (PA7),-1,,,,CHLK
+2023,10,,Saints D/STNOD/ST,,,,Assisted Tackles (TKA),2,,,,WZRD
+2023,10,,Seahawks D/STSeaD/ST,,,,Assisted Tackles (TKA),2,,,,GFM
+2023,11,,Bills D/STBufD/ST,,,,Assisted Tackles (TKA),-2,,,,TACT
+2023,11,,Browns D/STCleD/ST,,,,Assisted Tackles (TKA),-2,,,,SSBB
+2023,11,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),1,,,,MRYJ
+2023,11,,49ers D/STSFD/ST,,,,Assisted Tackles (TKA),2,,,,CHLK
+2023,12,,Browns D/STCleD/ST,,,,Assisted Tackles (TKA),1,,,,SSBB
+2023,12,,Jets D/STNYJD/ST,,,,Assisted Tackles (TKA),2,,,,BRIM
+2023,12,,Steelers D/STPitD/ST,,,,Passes Defensed (PD),1,,,,PCX
+2023,12,,49ers D/STSFD/ST,,,,Each Fumble Forced (FF),-1,,,,CHLK
+2023,14,,Colts D/STIndD/ST,,,,Passes Defensed (PD),1,,,,MRYJ
+2023,14,,Vikings D/STMinD/ST,,,,Passes Defensed (PD),-1,,,,PCX
+2023,14,,Steelers D/STPitD/ST,,,,Assisted Tackles (TKA),-2,,,,PCX
+2023,14,,Buccaneers D/STTBD/ST,,,,Assisted Tackles (TKA),2,,,,MXLB
