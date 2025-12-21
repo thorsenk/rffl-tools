@@ -25,11 +25,30 @@ Create a session AAR for:
 - ✅ Architecture decisions or refactoring
 - ✅ When you discover important patterns or gotchas
 - ✅ Sessions with valuable lessons learned
+- ✅ **Closing or archiving a chat session** - Document before moving on
 
 Don't create for:
 - ❌ Quick bug fixes
 - ❌ Simple, routine tasks
 - ❌ Sessions without notable outcomes
+- ❌ **Continuing a chat** - Use `/summarize` instead for quick context
+
+## `/session-aar` vs `/summarize`
+
+**Use `/session-aar` when:**
+- Closing or archiving a chat session
+- Completing significant work
+- Want structured documentation for future reference
+- Need to capture learnings and next steps
+
+**Use `/summarize` (Cursor built-in) when:**
+- Continuing a chat session
+- Need quick context to resume work
+- Just want a brief recap of what happened
+
+**Workflow:**
+- `/summarize` → Continue working in same chat
+- `/session-aar` → Close/archive chat with structured documentation
 
 ## Quick Session AAR Template
 
