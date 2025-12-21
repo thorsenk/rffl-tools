@@ -724,7 +724,7 @@ def cmd_korm_standings(
 
         if week:
             console.print(f"[bold]KORM Standings After Week {week} - {year}[/bold]")
-            # Find week result
+            # Find week result and validate week exists
             week_result = next((w for w in result.weeks if w.week == week), None)
             if not week_result:
                 console.print(f"[red]Week {week} not found[/red]")
@@ -735,8 +735,9 @@ def cmd_korm_standings(
             team_strikes: dict[str, int] = {team: 0 for team in result.teams}
             eliminated_teams: set[str] = set()
             
+            # Use week_result to ensure we process up to and including the requested week
             for w in result.weeks:
-                if w.week > week:
+                if w.week > week_result.week:
                     break
                 # Add strikes for this week
                 for team in w.strikes_given:
@@ -847,7 +848,8 @@ def cmd_forensic_investigate(
     from .forensic.agent import ForensicAgent
     
     try:
-        agent = ForensicAgent()
+        repo_root = find_repo_root()
+        agent = ForensicAgent(repo_root / "investigations")
         config = agent.load_investigation(case_id)
         
         if not config.commissioner_approved and not force:
@@ -887,11 +889,8 @@ def cmd_forensic_list():
     from pathlib import Path
     import yaml
     
-    try:
-        repo_root = find_repo_root()
-        investigations_dir = repo_root / "investigations"
-    except Exception:
-        investigations_dir = Path("investigations")
+    repo_root = find_repo_root()
+    investigations_dir = repo_root / "investigations"
     
     if not investigations_dir.exists():
         console.print("[yellow]No investigations directory found.[/yellow]")
@@ -924,11 +923,8 @@ def cmd_forensic_approve(
     import yaml
     from pathlib import Path
     
-    try:
-        repo_root = find_repo_root()
-        config_path = repo_root / "investigations" / case_id / "investigation.yaml"
-    except Exception:
-        config_path = Path(f"investigations/{case_id}/investigation.yaml")
+    repo_root = find_repo_root()
+    config_path = repo_root / "investigations" / case_id / "investigation.yaml"
     
     if not config_path.exists():
         console.print(f"[red]❌ Investigation {case_id} not found.[/red]")

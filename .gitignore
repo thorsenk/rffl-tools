@@ -6,6 +6,11 @@ build/exports/*/
 !build/recipes/.gitkeep
 !build/exports/.gitkeep
 
+# Inbox staging folder (files are temporary, directory structure preserved)
+inbox/*
+!inbox/.gitkeep
+!inbox/README.md
+
 # Python
 __pycache__/
 *.pyc

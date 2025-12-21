@@ -1,0 +1,65 @@
+case_id: RFFL-INQ-2025-001
+title: "Return TD 'Double Dip' Forensic Validation"
+category: RULES-SCORING
+
+petitioner:
+  team_code: WZRD
+  submitted_at: 2025-12-19T00:00:00Z
+
+inquiry:
+  summary: "Is the 12-point 'double dip' on return TDs exploitable?"
+  full_text: |
+    I noticed that when Rashid Shaheed (WR, SEA) returned a kickoff for a 
+    touchdown in Week 16, the Seattle D/ST also received 6 points for the 
+    same play. If an owner happens to roster both the individual player AND 
+    the team's D/ST, they get 12 points for a single play. Is this working 
+    correctly? Does this create an exploitable advantage?
+
+investigation:
+  type: return_td_double_dip
+  data_range: [2011, 2025]
+  league_id: 323196
+  tasks:
+    - id: player_return_tds
+      description: "Extract all individual return TDs from RFFL rosters"
+      completed: false
+    - id: dst_return_tds
+      description: "Extract all D/ST return TD scoring events"
+      completed: false
+    - id: cross_reference
+      description: "Join to find same-owner double-dip instances"
+      completed: false
+    - id: starter_analysis
+      description: "Determine lineup status (starter vs bench) for both"
+      completed: false
+    - id: counterfactual
+      description: "Identify missed double-dip opportunities"
+      completed: false
+    - id: summary_stats
+      description: "Aggregate findings and generate statistics"
+      completed: false
+
+status: awaiting_approval
+investigator: "Forensic Agent v1.0"
+commissioner_approved: false
+
+prior_analysis:
+  source: "Claude Project / RFFL-INQ-2025-001_Return_TD_Double_Scoring.md"
+  findings_summary: |
+    NFL-wide preliminary analysis:
+    - ~10 return TDs per NFL season (2020-2025 average)
+    - <1% per-game probability of any return TD
+    - Only 6% of return TDs came from fantasy-startable players
+    - Expected value of intentional "stacking" strategy: -4.94 pts/week
+    - Mechanic is standard across ESPN/Yahoo/NFL.com/Sleeper
+  validation_required:
+    - "Actual count of double-dip events in RFFL history (2011-2025)"
+    - "Validate GFM co-owner Lance's claim of receiving 12 pts on return TD"
+    - "Evidence of intentional stacking patterns (or lack thereof)"
+    - "Percentage of RFFL return TDs that resulted in actual benefit"
+
+outputs:
+  local_path: "investigations/RFFL-INQ-2025-001/"
+  github_path: "rffl-codex/investigations/RFFL-INQ-2025-001/"
+  sync_to_claude_project: true
+

@@ -1,0 +1,169 @@
+year,team_id,team_abbrev,team_name
+2011,1,COCK,Drew Peacocks
+2011,2,GFM,Great Fantasy Minds
+2011,3,2SCM,2-Step Church Mice
+2011,4,BBWZ,Brimball Wizards
+2011,5,SWEE,Sweet's Special Sauce
+2011,6,PTB,Raging Pitbulls
+2011,7,GOW,Jag Bombers
+2011,8,KNAB,Jackson Pines
+2011,9,AC,Alpha Chalkers
+2011,10,DKGG,Da Keggers
+2011,11,MJI,"Mary Jane, Inc."
+2011,12,BBRS,Blue Ballers
+2012,1,COCK,Drew Peacocks
+2012,2,GFM,Great Fantasy Minds
+2012,3,2SCM,2-Step Church Mice
+2012,4,BBWZ,Brimball Wizards
+2012,5,SWEE,Sweet's Special Sauce
+2012,6,PTB,Raging Pitbulls
+2012,7,GOW,Jagbombers !!
+2012,8,KNAB,Jackson Pines
+2012,9,AC,Alpha Chalkers
+2012,10,DKGG,Da Keggers
+2012,11,mji,Mary Jane inc.
+2012,12,BBRS,Blue Ballers
+2013,1,COCK, Drew Peacocks
+2013,2,GRFM,Great Fantasy Minds
+2013,3,MXBN, Mex-Banese
+2013,4,BRIM,Brimstone Bohemians
+2013,5,SSS,Sweet's Special Sauce
+2013,6,PTBS, Pitbulls
+2013,7,JGBM, Jag Bombers
+2013,8,LNDS,Least Needlish One's
+2013,9,ACHK, Alpha Chalkers
+2013,10,DKGG, Da Keggers
+2013,11,MRYJ, Mary Jane Inc.
+2013,12,WTWZ, White Wizards
+2014,1,COCK,#2 Drew Peacocks
+2014,2,GRFM,#9 Great Fantasy Minds
+2014,3,MXBN,#1 Mex-Banese
+2014,4,BRIM,#5 Brimstone Bohemians
+2014,5,SSS,#8 Sweet's Special Sauce
+2014,6,PTBS,#10 Raging Pitbulls
+2014,7,JGBM,#3 Jag Bombers
+2014,8,LNDS,#7 Least Needlish One's
+2014,9,FYOU,#12 Alpha Chalkers
+2014,10,DKGG,#6 Da Keggers
+2014,11,MRYJ,#11 Mary Jane Inc.
+2014,12,WTWZ,#4 White Wizards
+2015,1,DPCX,5 Drew Peacocks
+2015,2,GRFM,1 Great Fantasy Minds
+2015,3,MXBN,8 Mex Banese
+2015,4,BRIM,3 Brimstone Bohemians
+2015,5,SSS,4 Sweet's Special Sauce
+2015,6,PTBS,7 Raging Pitbulls
+2015,7,JGBM,12 Jag Bombers
+2015,8,LNDS,11 Least Needlish One's
+2015,9,FYOU,10 Alpha Chalkers
+2015,10,DKGG,9 Da Keggers
+2015,11,MRYJ,2 Mary Jane
+2015,12,WTWZ,6 White Wizards
+2016,1,DPCX,#7 Drew Peacocks
+2016,2,GFM,#11 Great Fantasy Minds
+2016,3,MXBN,#5 Mex Banese 
+2016,4,BRIM,#2 Brimstone Bohemians **
+2016,5,SSS,#10 Sweet's Special Sauce
+2016,6,PTB,#4 Raging Pitbulls *
+2016,7,JAG,#3 Jag Bombers *
+2016,8,LNO,#9 Least Needlish One's
+2016,9,CHLK,#1 Alpha Chalkers ***
+2016,10,DKGG,#8 Da Keggers 
+2016,11,MRYJ,#6 Mary Jane 
+2016,12,WWZ,#12 White Wizards
+2017,1,DPCX,3 Drew Peacocks
+2017,2,GFM,2 Great Fantasy Minds
+2017,3,MXBN,9 Mex Banese 
+2017,4,BRIM,5 Brimstone Bohemians
+2017,5,SSS,12 Sweet's Special Sauce
+2017,6,PTB,7 Raging Pitbulls
+2017,7,JAG,1 Jag Bombers
+2017,8,LNO,10 Least Needlish One's
+2017,9,CHLK,8 Alpha Chalkers
+2017,10,DKGG,6 Da Keggers 
+2017,11,MRYJ,4 Mary Jane 
+2017,12,WWZ,11 White Wizards
+2018,1,PCX,4 Peacocks Elite
+2018,2,GFM,1 Great Fantasy Minds
+2018,3,MXLB,8 Mex Banese 
+2018,4,BRIM,7 Brimstone Bohemians
+2018,5,SSS,12 Sweet's Special Sauce
+2018,6,PITB,6 Raging Pitbulls
+2018,7,JAG,9 Jag Bombers
+2018,8,LNO,11 Least Needlish One's
+2018,9,CHLK,3 Alpha Chalkers
+2018,10,DKGG,2 Da Keggers 
+2018,11,MRYJ,5 Mary Jane 
+2018,12,WZRD,10 White Wizards
+2019,1,PCX,9 Rise of Peacocks
+2019,2,GFM,8 Great Fantasy Minds
+2019,3,MXLB,3 Mex Banese 
+2019,4,BRIM,11 Brimstone Bohemians
+2019,5,SBB,4 Sauce  Boss Bandits
+2019,6,PITB,5 Raging Pitbulls
+2019,7,JAG,2 Jag Bombers
+2019,8,LNO,10 Ten Nineties
+2019,9,CHLK,12 Alpha Chalkers
+2019,10,DKGG,7 Da Keggers 
+2019,11,MRYJ,6 Mary Jane 
+2019,12,WZRD,1 White Wizards
+2020,1,PCX,9 Molotov Peacocks
+2020,2,GFM,7 Great Fantasy Minds
+2020,3,MXLB,1 Mex Banese 
+2020,4,BRIM,11 Brimstone Bohemians
+2020,5,SBB,12 Sauce  Boss Bandits
+2020,6,PITB,4 Raging Pitbulls
+2020,7,JAGB,5 Jag Bombers
+2020,8,LNO,2 Benais Smileys 
+2020,9,CHLK,10 Alpha Chalkers
+2020,10,DKEG,8 Da Keggers 
+2020,11,MRYJ,6 Mary Jane 
+2020,12,WZRD,3 White Wizards
+2021,1,PCX,8 Darth Peacocks
+2021,2,GFM,9 Great Fantasy Minds
+2021,3,MXLB,11 Mex Banese 
+2021,4,BRIM,12 Brimstone Bohemians
+2021,5,SSBB,6 SS Bobber Bandits
+2021,6,PITB,7 Raging Pitbulls
+2021,7,JAGB,10 Jag Bombers
+2021,8,BNSM,3 Benais Smileys
+2021,9,CHLK,5 Alpha Chalkers
+2021,11,MRYJ,4 Mary Jane 
+2021,12,WZRD,2 White Wizards
+2021,13,TACT,1 Tactical Tacticians
+2022,1,PCX,2 Gypsy Peacocks
+2022,2,GFM,1 Great Fantasy Minds
+2022,3,MXLB,7 Mex Banese 
+2022,4,BRIM,5 Brimstone Bohemians
+2022,5,SSBB,11 SS Bobber Bandits
+2022,7,JAGB,8 Jag Bombers
+2022,8,LNO,6 Least Needlish Ones
+2022,9,CHLK,3 Alpha Chalkers
+2022,11,MRYJ,4 Mary Jane 
+2022,12,WZRD,12 White Wizards
+2022,13,TACT,10 Tactical Tacticians
+2022,14,TFF,9 Teem Fontsy Foball
+2023,1,PCX,9 Gypsy PCX
+2023,2,GFM,7 Great Fantasy Minds
+2023,3,MXLB,6 Mex Banese 
+2023,4,BRIM,10 Brimstone Bohemians
+2023,5,SSBB,11 SS Bobber Bandits
+2023,7,JAGB,1 Jag Bombers
+2023,8,LNO,4 Least Needlish Ones
+2023,9,CHLK,8 Alpha Chalkers
+2023,11,MRYJ,12 Mary Jane 
+2023,12,WZRD,5 White Wizards
+2023,13,TACT,2 Tactical Tacticians
+2023,14,PKMC,3 PKMC Unhinged
+2024,1,PCX,Gypsy PCX
+2024,2,GFM,Great Fantasy Minds
+2024,3,MXLB,Mex Banese 
+2024,4,BRIM,Brimstone Bohemians
+2024,5,SSBB,SS Bobber Bandits
+2024,7,JAGB,Jag Bombers 
+2024,8,LNO,Least Needlish Ones
+2024,9,CHLK,Alpha Chalkers
+2024,11,MRYJ,Mary Jane 
+2024,12,WZRD,White Wizards
+2024,13,TACT,Tactical Tacticians
+2024,14,PKMC,PKMC Unhinged

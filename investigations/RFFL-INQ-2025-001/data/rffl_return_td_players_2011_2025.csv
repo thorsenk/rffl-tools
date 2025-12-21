@@ -1,0 +1,5 @@
+season,week,player_id,player_name,nfl_team,pro_team_id,scoring_type,points,rffl_team_code,lineup_slot
+2025,9,4431268,Chimere Dike,TEN,10,kick_return_td,6.0,CHLK,K
+2025,10,4432620,Parker Washington,JAX,30,kick_return_td,6.0,PKMC,FLEX
+2025,12,4431268,Chimere Dike,TEN,10,kick_return_td,6.0,CHLK,K
+2025,16,4032473,Rashid Shaheed,SEA,26,kick_return_td,6.0,LNO,WR

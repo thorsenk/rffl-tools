@@ -223,18 +223,21 @@ def process_korm_week(
     ]
     active_count_start = len(active_teams)
 
-    # Filter scores to active teams only
-    active_scores = {team: scores[team] for team in active_teams if team in scores}
-
     # Step 2: Determine strike mode
     # 5 or more active = 2-strike mode, 4 or fewer = 1-strike mode
     strike_mode = "2-strike" if active_count_start >= 5 else "1-strike"
     strike_count = 2 if strike_mode == "2-strike" else 1
 
-    # Step 3: Sort teams by score (low to high)
+    # Step 3: Build active scores dict, treating missing scores as 0.0
+    # This ensures ALL active teams are considered for strikes, not just those with data
+    active_scores = {
+        team: scores.get(team, 0.0) for team in active_teams
+    }
+
+    # Step 4: Sort teams by score (low to high)
     sorted_teams = sorted(active_scores.items(), key=lambda x: x[1])
 
-    # Step 4: Identify teams to strike (handle ties)
+    # Step 5: Identify teams to strike (handle ties)
     teams_to_strike = []
 
     if len(sorted_teams) >= strike_count:
@@ -248,17 +251,18 @@ def process_korm_week(
             if score <= threshold_score
         ]
 
-    # Step 5: Build scores list for output
+    # Step 6: Build scores list for output
     scores_list = [
         {"team": team, "score": score}
         for team, score in sorted(active_scores.items(), key=lambda x: -x[1])
     ]
 
-    # Step 6: Assign strikes and check eliminations
+    # Step 7: Assign strikes and check eliminations
     eliminations = []
     for team_code in teams_to_strike:
         result = team_results[team_code]
-        strike = KORMStrike(week=week, score=scores[team_code])
+        # Use score from active_scores (which includes 0.0 default for missing scores)
+        strike = KORMStrike(week=week, score=active_scores[team_code])
         result.strikes.append(strike)
 
         if result.strike_count >= 2:

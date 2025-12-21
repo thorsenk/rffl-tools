@@ -1,0 +1,769 @@
+{
+  "season": 2021,
+  "korm_window": {
+    "start": 1,
+    "end": 14
+  },
+  "entry_fee": 100,
+  "pool": 1200,
+  "teams": [
+    "MXLB",
+    "LNO",
+    "WZRD",
+    "JAGB",
+    "TACT",
+    "GFM",
+    "PITB",
+    "MRYJ",
+    "CHLK",
+    "SSBB",
+    "BRIM",
+    "PCX"
+  ],
+  "ended_early": true,
+  "weeks": [
+    {
+      "week": 1,
+      "active_count": 12,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "JAGB",
+          "score": 144.06
+        },
+        {
+          "team": "GFM",
+          "score": 129.52
+        },
+        {
+          "team": "PITB",
+          "score": 116.4
+        },
+        {
+          "team": "BRIM",
+          "score": 113.42
+        },
+        {
+          "team": "MRYJ",
+          "score": 109.06
+        },
+        {
+          "team": "CHLK",
+          "score": 108.78
+        },
+        {
+          "team": "LNO",
+          "score": 90.7
+        },
+        {
+          "team": "WZRD",
+          "score": 87.46
+        },
+        {
+          "team": "SSBB",
+          "score": 87.08
+        },
+        {
+          "team": "MXLB",
+          "score": 86.84
+        },
+        {
+          "team": "PCX",
+          "score": 79.16
+        },
+        {
+          "team": "TACT",
+          "score": 76.92
+        }
+      ],
+      "strikes": [
+        "TACT",
+        "PCX"
+      ],
+      "eliminations": []
+    },
+    {
+      "week": 2,
+      "active_count": 12,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "TACT",
+          "score": 132.1
+        },
+        {
+          "team": "MRYJ",
+          "score": 123.92
+        },
+        {
+          "team": "JAGB",
+          "score": 121.7
+        },
+        {
+          "team": "MXLB",
+          "score": 117.52
+        },
+        {
+          "team": "PITB",
+          "score": 116.16
+        },
+        {
+          "team": "WZRD",
+          "score": 106.44
+        },
+        {
+          "team": "BRIM",
+          "score": 103.72
+        },
+        {
+          "team": "CHLK",
+          "score": 95.48
+        },
+        {
+          "team": "LNO",
+          "score": 94.06
+        },
+        {
+          "team": "GFM",
+          "score": 90.28
+        },
+        {
+          "team": "PCX",
+          "score": 90.0
+        },
+        {
+          "team": "SSBB",
+          "score": 72.82
+        }
+      ],
+      "strikes": [
+        "SSBB",
+        "PCX"
+      ],
+      "eliminations": [
+        "PCX"
+      ]
+    },
+    {
+      "week": 3,
+      "active_count": 11,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "LNO",
+          "score": 134.32
+        },
+        {
+          "team": "TACT",
+          "score": 130.94
+        },
+        {
+          "team": "CHLK",
+          "score": 108.78
+        },
+        {
+          "team": "BRIM",
+          "score": 106.6
+        },
+        {
+          "team": "MRYJ",
+          "score": 104.82
+        },
+        {
+          "team": "SSBB",
+          "score": 100.84
+        },
+        {
+          "team": "WZRD",
+          "score": 96.48
+        },
+        {
+          "team": "GFM",
+          "score": 79.32
+        },
+        {
+          "team": "MXLB",
+          "score": 76.74
+        },
+        {
+          "team": "PITB",
+          "score": 76.38
+        },
+        {
+          "team": "JAGB",
+          "score": 71.14
+        }
+      ],
+      "strikes": [
+        "JAGB",
+        "PITB"
+      ],
+      "eliminations": []
+    },
+    {
+      "week": 4,
+      "active_count": 11,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "MRYJ",
+          "score": 136.86
+        },
+        {
+          "team": "SSBB",
+          "score": 122.38
+        },
+        {
+          "team": "PITB",
+          "score": 113.24
+        },
+        {
+          "team": "GFM",
+          "score": 110.02
+        },
+        {
+          "team": "CHLK",
+          "score": 106.64
+        },
+        {
+          "team": "TACT",
+          "score": 106.22
+        },
+        {
+          "team": "MXLB",
+          "score": 102.22
+        },
+        {
+          "team": "JAGB",
+          "score": 99.52
+        },
+        {
+          "team": "BRIM",
+          "score": 84.52
+        },
+        {
+          "team": "LNO",
+          "score": 73.72
+        },
+        {
+          "team": "WZRD",
+          "score": 66.06
+        }
+      ],
+      "strikes": [
+        "WZRD",
+        "LNO"
+      ],
+      "eliminations": []
+    },
+    {
+      "week": 5,
+      "active_count": 11,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "SSBB",
+          "score": 173.62
+        },
+        {
+          "team": "WZRD",
+          "score": 163.94
+        },
+        {
+          "team": "LNO",
+          "score": 129.2
+        },
+        {
+          "team": "TACT",
+          "score": 126.56
+        },
+        {
+          "team": "PITB",
+          "score": 118.68
+        },
+        {
+          "team": "JAGB",
+          "score": 104.66
+        },
+        {
+          "team": "CHLK",
+          "score": 90.08
+        },
+        {
+          "team": "BRIM",
+          "score": 89.48
+        },
+        {
+          "team": "GFM",
+          "score": 86.68
+        },
+        {
+          "team": "MRYJ",
+          "score": 76.18
+        },
+        {
+          "team": "MXLB",
+          "score": 62.04
+        }
+      ],
+      "strikes": [
+        "MXLB",
+        "MRYJ"
+      ],
+      "eliminations": []
+    },
+    {
+      "week": 6,
+      "active_count": 11,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "GFM",
+          "score": 164.02
+        },
+        {
+          "team": "MRYJ",
+          "score": 133.4
+        },
+        {
+          "team": "WZRD",
+          "score": 127.8
+        },
+        {
+          "team": "SSBB",
+          "score": 120.4
+        },
+        {
+          "team": "TACT",
+          "score": 108.8
+        },
+        {
+          "team": "JAGB",
+          "score": 99.16
+        },
+        {
+          "team": "BRIM",
+          "score": 94.58
+        },
+        {
+          "team": "LNO",
+          "score": 90.72
+        },
+        {
+          "team": "PITB",
+          "score": 88.28
+        },
+        {
+          "team": "MXLB",
+          "score": 75.04
+        },
+        {
+          "team": "CHLK",
+          "score": 55.88
+        }
+      ],
+      "strikes": [
+        "CHLK",
+        "MXLB"
+      ],
+      "eliminations": [
+        "MXLB"
+      ]
+    },
+    {
+      "week": 7,
+      "active_count": 10,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "LNO",
+          "score": 127.32
+        },
+        {
+          "team": "WZRD",
+          "score": 126.84
+        },
+        {
+          "team": "GFM",
+          "score": 122.04
+        },
+        {
+          "team": "CHLK",
+          "score": 119.2
+        },
+        {
+          "team": "TACT",
+          "score": 106.76
+        },
+        {
+          "team": "PITB",
+          "score": 102.88
+        },
+        {
+          "team": "JAGB",
+          "score": 91.94
+        },
+        {
+          "team": "SSBB",
+          "score": 91.28
+        },
+        {
+          "team": "MRYJ",
+          "score": 86.94
+        },
+        {
+          "team": "BRIM",
+          "score": 61.94
+        }
+      ],
+      "strikes": [
+        "BRIM",
+        "MRYJ"
+      ],
+      "eliminations": [
+        "MRYJ"
+      ]
+    },
+    {
+      "week": 8,
+      "active_count": 9,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "CHLK",
+          "score": 126.6
+        },
+        {
+          "team": "LNO",
+          "score": 111.76
+        },
+        {
+          "team": "TACT",
+          "score": 104.9
+        },
+        {
+          "team": "SSBB",
+          "score": 103.92
+        },
+        {
+          "team": "PITB",
+          "score": 96.2
+        },
+        {
+          "team": "JAGB",
+          "score": 74.26
+        },
+        {
+          "team": "GFM",
+          "score": 73.04
+        },
+        {
+          "team": "WZRD",
+          "score": 65.62
+        },
+        {
+          "team": "BRIM",
+          "score": 61.06
+        }
+      ],
+      "strikes": [
+        "BRIM",
+        "WZRD"
+      ],
+      "eliminations": [
+        "BRIM",
+        "WZRD"
+      ]
+    },
+    {
+      "week": 9,
+      "active_count": 7,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "SSBB",
+          "score": 118.04
+        },
+        {
+          "team": "CHLK",
+          "score": 114.72
+        },
+        {
+          "team": "JAGB",
+          "score": 107.6
+        },
+        {
+          "team": "PITB",
+          "score": 83.84
+        },
+        {
+          "team": "GFM",
+          "score": 71.14
+        },
+        {
+          "team": "LNO",
+          "score": 70.76
+        },
+        {
+          "team": "TACT",
+          "score": 58.56
+        }
+      ],
+      "strikes": [
+        "TACT",
+        "LNO"
+      ],
+      "eliminations": [
+        "TACT",
+        "LNO"
+      ]
+    },
+    {
+      "week": 10,
+      "active_count": 5,
+      "strike_mode": "2-strike",
+      "scores": [
+        {
+          "team": "GFM",
+          "score": 115.84
+        },
+        {
+          "team": "SSBB",
+          "score": 95.2
+        },
+        {
+          "team": "CHLK",
+          "score": 70.5
+        },
+        {
+          "team": "PITB",
+          "score": 66.92
+        },
+        {
+          "team": "JAGB",
+          "score": 61.94
+        }
+      ],
+      "strikes": [
+        "JAGB",
+        "PITB"
+      ],
+      "eliminations": [
+        "JAGB",
+        "PITB"
+      ]
+    },
+    {
+      "week": 11,
+      "active_count": 3,
+      "strike_mode": "1-strike",
+      "scores": [
+        {
+          "team": "SSBB",
+          "score": 156.68
+        },
+        {
+          "team": "GFM",
+          "score": 94.8
+        },
+        {
+          "team": "CHLK",
+          "score": 51.92
+        }
+      ],
+      "strikes": [
+        "CHLK"
+      ],
+      "eliminations": [
+        "CHLK"
+      ]
+    },
+    {
+      "week": 12,
+      "active_count": 2,
+      "strike_mode": "1-strike",
+      "scores": [
+        {
+          "team": "SSBB",
+          "score": 128.82
+        },
+        {
+          "team": "GFM",
+          "score": 81.0
+        }
+      ],
+      "strikes": [
+        "GFM"
+      ],
+      "eliminations": []
+    },
+    {
+      "week": 13,
+      "active_count": 2,
+      "strike_mode": "1-strike",
+      "scores": [
+        {
+          "team": "SSBB",
+          "score": 128.28
+        },
+        {
+          "team": "GFM",
+          "score": 48.16
+        }
+      ],
+      "strikes": [
+        "GFM"
+      ],
+      "eliminations": [
+        "GFM"
+      ]
+    }
+  ],
+  "final_standings": [
+    {
+      "place": 1,
+      "team": "SSBB",
+      "strikes": 1,
+      "strike_weeks": [
+        2
+      ],
+      "status": "on_notice",
+      "elimination_week": null,
+      "payout": 800
+    },
+    {
+      "place": 2,
+      "team": "GFM",
+      "strikes": 2,
+      "strike_weeks": [
+        12,
+        13
+      ],
+      "status": "eliminated",
+      "elimination_week": 13,
+      "payout": 300
+    },
+    {
+      "place": 3,
+      "team": "CHLK",
+      "strikes": 2,
+      "strike_weeks": [
+        6,
+        11
+      ],
+      "status": "eliminated",
+      "elimination_week": 11,
+      "payout": 100
+    },
+    {
+      "place": 4,
+      "team": "PITB",
+      "strikes": 2,
+      "strike_weeks": [
+        3,
+        10
+      ],
+      "status": "eliminated",
+      "elimination_week": 10,
+      "payout": 0
+    },
+    {
+      "place": 5,
+      "team": "JAGB",
+      "strikes": 2,
+      "strike_weeks": [
+        3,
+        10
+      ],
+      "status": "eliminated",
+      "elimination_week": 10,
+      "payout": 0
+    },
+    {
+      "place": 6,
+      "team": "TACT",
+      "strikes": 2,
+      "strike_weeks": [
+        1,
+        9
+      ],
+      "status": "eliminated",
+      "elimination_week": 9,
+      "payout": 0
+    },
+    {
+      "place": 7,
+      "team": "LNO",
+      "strikes": 2,
+      "strike_weeks": [
+        4,
+        9
+      ],
+      "status": "eliminated",
+      "elimination_week": 9,
+      "payout": 0
+    },
+    {
+      "place": 8,
+      "team": "WZRD",
+      "strikes": 2,
+      "strike_weeks": [
+        4,
+        8
+      ],
+      "status": "eliminated",
+      "elimination_week": 8,
+      "payout": 0
+    },
+    {
+      "place": 9,
+      "team": "BRIM",
+      "strikes": 2,
+      "strike_weeks": [
+        7,
+        8
+      ],
+      "status": "eliminated",
+      "elimination_week": 8,
+      "payout": 0
+    },
+    {
+      "place": 10,
+      "team": "MRYJ",
+      "strikes": 2,
+      "strike_weeks": [
+        5,
+        7
+      ],
+      "status": "eliminated",
+      "elimination_week": 7,
+      "payout": 0
+    },
+    {
+      "place": 11,
+      "team": "MXLB",
+      "strikes": 2,
+      "strike_weeks": [
+        5,
+        6
+      ],
+      "status": "eliminated",
+      "elimination_week": 6,
+      "payout": 0
+    },
+    {
+      "place": 12,
+      "team": "PCX",
+      "strikes": 2,
+      "strike_weeks": [
+        1,
+        2
+      ],
+      "status": "eliminated",
+      "elimination_week": 2,
+      "payout": 0
+    }
+  ],
+  "winner": "SSBB",
+  "generated": "2025-12-20T12:31:09.276900"
+}

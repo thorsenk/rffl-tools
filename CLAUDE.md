@@ -27,6 +27,41 @@ RFFL Tools is a unified repository combining `rffl-boxscores` (data processing e
 - Write tests for all new functionality
 - Update documentation when adding features
 
+## Inbox Folder - CRITICAL CLEANUP REQUIREMENT
+
+**⚠️ MANDATORY: When processing files from `inbox/` folder, you MUST clean up after completion.**
+
+The `inbox/` folder is a staging area for files awaiting processing. After processing files:
+
+1. **Move processed files** to their proper destination (e.g., `data/`, `investigations/`, `docs/`)
+2. **Delete temporary files** that are no longer needed
+3. **ALWAYS verify** the inbox is clean before completing your task
+
+### Using Inbox Utilities
+
+Use the provided utilities in `rffl.core.inbox`:
+
+```python
+from rffl.core.inbox import process_inbox_files, ensure_inbox_clean, move_inbox_file
+
+# Process files with automatic cleanup checking
+def process_file(file_path: Path):
+    # Your processing logic
+    move_inbox_file(file_path, destination_path)
+
+process_inbox_files(process_file)
+
+# Verify cleanup
+ensure_inbox_clean()  # Raises if inbox not clean
+```
+
+### CLI Commands
+
+- `rffl utils inbox-status` - Check what files are in inbox
+- `rffl utils inbox-clean` - Verify inbox is clean
+
+**Failure to clean up the inbox is considered an incomplete task.**
+
 ## Common Tasks
 
 ### Adding a New Command

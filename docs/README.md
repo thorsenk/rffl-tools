@@ -7,6 +7,9 @@ This directory contains project documentation organized by purpose.
 - `archive/` - Archived investigation and research documentation
   - Stat corrections investigation docs
   - Completed research that led to implemented features
+- `aars/` - After-Action Reviews (AARs)
+  - Project build documentation
+  - Implementation reviews and lessons learned
 
 ## Main Documentation
 

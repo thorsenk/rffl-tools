@@ -56,11 +56,6 @@ def get_team_abbrev(team: Any) -> str:
             if value and isinstance(value, str):
                 str_value: str = value
                 return str_value
-    # Fallback to team name if no abbreviation found
-    name = getattr(team, "name", None)
-    if name is not None:
-        result: str = str(name)
-        return result
     return "Unknown"
 
 

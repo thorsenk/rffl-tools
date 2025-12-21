@@ -390,6 +390,11 @@ Note: Historical seasons (2011-2018) automatically skip boxscores and transactio
         action="store_true",
         help="Skip transactions export (2018+ only)",
     )
+    parser.add_argument(
+        "--skip-stat-corrections",
+        action="store_true",
+        help="Skip stat corrections export (2019+ only)",
+    )
 
     args = parser.parse_args()
 
