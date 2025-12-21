@@ -21,6 +21,7 @@ from .recipes.migrate import migrate_recipe
 from .recipes.models import load_recipe, validate_recipe_paths
 from .recipes.runner import RecipeRunner
 from .recipes.wizard import RecipeWizard
+from .moa import MOADispatcher
 
 load_dotenv(find_dotenv(), override=False)
 
@@ -1116,6 +1117,47 @@ def cmd_clean_inbox(
 def cmd_inbox_status():
     """Check the status of the inbox folder (alias for read-inbox)."""
     cmd_read_inbox(preview=False)
+
+
+# MOA - Master Orchestrator Agent
+@app.command("moa")
+def cmd_moa(
+    request: str = typer.Argument(..., help="What do you want to do?"),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Show what would be executed without running"),
+):
+    """
+    Master Orchestrator Agent - intelligent command dispatcher.
+
+    Natural language interface to all RFFL tools. MOA understands your intent
+    and routes requests to the appropriate commands.
+
+    Examples:
+        rffl moa "export 2024 boxscores"
+        rffl moa "list capabilities"
+        rffl moa "what did I just do"
+        rffl moa "run the weekly recipe"
+        rffl moa "show KORM standings for 2024"
+    """
+    try:
+        repo_root = find_repo_root()
+        dispatcher = MOADispatcher(repo_root=repo_root, dry_run=dry_run)
+        result = dispatcher.dispatch(request)
+
+        if result.success:
+            if result.output:
+                console.print(result.output)
+            if dry_run:
+                console.print(f"\n[dim]Command: {result.command}[/dim]")
+        else:
+            if result.error:
+                console.print(f"[red]{result.error}[/red]")
+            if result.command:
+                console.print(f"[dim]Attempted: {result.command}[/dim]")
+            raise typer.Exit(1)
+
+    except Exception as e:
+        console.print(f"[red]MOA error: {e}[/red]")
+        raise typer.Exit(1)
 
 
 # Main entry point
