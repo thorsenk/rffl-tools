@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import unquote
 
-import requests
+import requests  # type: ignore[import-untyped]
 from bs4 import BeautifulSoup
 
 try:
@@ -103,7 +103,7 @@ def _scrape_stat_corrections_page(
                 
                 # Set cookies from session
                 if session.cookies:
-                    cookies_list = []
+                    cookies_list: list[dict[str, str]] = []
                     for cookie in session.cookies:
                         cookies_list.append({
                             "name": cookie.name,
@@ -111,7 +111,7 @@ def _scrape_stat_corrections_page(
                             "domain": cookie.domain or ".espn.com",
                             "path": cookie.path or "/",
                         })
-                    context.add_cookies(cookies_list)
+                    context.add_cookies(cookies_list)  # type: ignore[arg-type]
                 
                 page = context.new_page()
                 full_url = f"{url}?leagueId={league_id}&scoringPeriodId={week}"

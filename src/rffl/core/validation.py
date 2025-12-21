@@ -1,8 +1,9 @@
 """Data validation logic."""
 
 from pathlib import Path
+from typing import Any
 
-import pandas as pd
+import pandas as pd  # type: ignore[import-untyped]
 
 from .exceptions import ValidationError
 
@@ -10,7 +11,7 @@ from .exceptions import ValidationError
 def validate_boxscores(
     csv_path: str | Path,
     tolerance: float = 0.0,
-) -> dict[str, any]:
+) -> dict[str, Any]:
     """
     Validate exported boxscore data for consistency and completeness.
 

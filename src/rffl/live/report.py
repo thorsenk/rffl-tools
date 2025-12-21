@@ -129,7 +129,8 @@ def fetch_pro_team_data(season: int, timeout: float) -> dict[str, Any]:
         raise LiveScoringError(f"Pro team schedule request failed: {exc.reason}") from exc
 
     try:
-        return json.loads(payload.decode("utf-8"))
+        result: dict[str, Any] = json.loads(payload.decode("utf-8"))
+        return result
     except json.JSONDecodeError as exc:  # pragma: no cover - invalid payload
         raise LiveScoringError("Failed to parse pro team schedule payload") from exc
 
@@ -283,8 +284,11 @@ def resolve_event_id(
     game = pro_games.get((int(team_id), scoring_period))
     if not game:
         return None
+    game_id = game.get("id")
+    if game_id is None:
+        return None
     try:
-        return int(game.get("id"))
+        return int(game_id)
     except (TypeError, ValueError):  # pragma: no cover - malformed payload
         return None
 
@@ -689,8 +693,12 @@ def build_player_card(
         else "FA"
     )
 
-    default_position = player.get("defaultPositionId")
-    position = POSITION_LABELS.get(int(default_position), SLOT_LABELS.get(slot_id, ""))
+    default_position_raw = player.get("defaultPositionId")
+    if default_position_raw is not None:
+        default_position = int(default_position_raw)
+        position = POSITION_LABELS.get(default_position, SLOT_LABELS.get(slot_id, ""))
+    else:
+        position = SLOT_LABELS.get(slot_id, "")
 
     baseline = extract_projection(player, scoring_period)
     actual = extract_actual(player, scoring_period)
@@ -890,18 +898,18 @@ def generate_live_matchup_report(
         if not matchup_reports:
             return "```\nNo matchups found.\n```"
 
-        lines: List[str] = [f"### Live Matchup Report - Week {period}", ""]
+        all_lines: List[str] = [f"### Live Matchup Report - Week {period}", ""]
         for meta, away_report, home_report in matchup_reports:
             header = f"#### {away_report.name} @ {home_report.name} (Matchup {meta.get('matchup_id', '-')})"
-            lines.append(header)
-            lines.extend(render_summary_table([away_report, home_report]))
-            lines.append("")
+            all_lines.append(header)
+            all_lines.extend(render_summary_table([away_report, home_report]))
+            all_lines.append("")
             for report in (away_report, home_report):
-                lines.extend(render_team_section(report))
-                lines.append("")
-        if lines and lines[-1] == "":
-            lines.pop()
-        content = "\n".join(lines)
+                all_lines.extend(render_team_section(report))
+                all_lines.append("")
+        if all_lines and all_lines[-1] == "":
+            all_lines.pop()
+        content = "\n".join(all_lines)
         return f"```\n{content}\n```"
 
     period, _meta, away_report, home_report = fetch_matchup_reports(

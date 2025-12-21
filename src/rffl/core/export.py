@@ -5,7 +5,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
+import pandas as pd  # type: ignore[import-untyped]
 
 from .api import ESPNCredentials, ESPNClient
 from .constants import FLEX_ELIGIBLE_POSITIONS, RFFL_LINEUP_REQUIREMENTS
@@ -164,7 +164,8 @@ def export_boxscores(
                         }
                         # Flag invalid FLEX position on real rows (RB/WR/TE only)
                         if row["slot"] == "FLEX":
-                            pos = (row.get("position") or "").upper()
+                            pos_val = row.get("position")
+                            pos = (str(pos_val) if pos_val else "").upper()
                             if pos not in FLEX_ELIGIBLE_POSITIONS:
                                 row["issue_flag"] = (
                                     f"INVALID_FLEX_POSITION:{pos or 'UNKNOWN'}"
@@ -176,9 +177,10 @@ def export_boxscores(
                     # Fill missing required starter slots (0-pt placeholders)
                     if fill_missing_slots:
                         # Count current starters by slot
-                        have_counts = {}
+                        have_counts: dict[str, int] = {}
                         for r in starters:
-                            have_counts[r["slot"]] = have_counts.get(r["slot"], 0) + 1
+                            slot_key = str(r["slot"])
+                            have_counts[slot_key] = have_counts.get(slot_key, 0) + 1
 
                         for req_slot, req_count in RFFL_LINEUP_REQUIREMENTS.items():
                             have = have_counts.get(req_slot, 0)
@@ -202,8 +204,8 @@ def export_boxscores(
                                 starters.append(placeholder)
                                 stamped.append(placeholder)
 
-                    team_proj = round(sum(r["rs_projected_pf"] for r in starters), 2)
-                    team_act = round(sum(r["rs_actual_pf"] for r in starters), 2)
+                    team_proj = round(sum(float(r["rs_projected_pf"] or 0) for r in starters), 2)
+                    team_act = round(sum(float(r["rs_actual_pf"] or 0) for r in starters), 2)
 
                     # Order rows: starters in fixed slot sequence, then bench (original order)
                     desired_order = [
@@ -218,9 +220,10 @@ def export_boxscores(
                         "K",
                     ]
                     # Build starters by desired sequence
-                    starters_by_slot = {}
+                    starters_by_slot: dict[str, list[dict[str, Any]]] = {}
                     for r in starters:
-                        starters_by_slot.setdefault(r["slot"], []).append(r)
+                        slot_key = str(r["slot"])
+                        starters_by_slot.setdefault(slot_key, []).append(r)
                     # Maintain original order within same slot
                     for lst in starters_by_slot.values():
                         lst.sort(key=lambda x: x.get("_orig_idx", 0))
@@ -247,7 +250,7 @@ def export_boxscores(
                     )
                     starters_sorted.extend(leftovers)
                     bench_sorted = [r for r in stamped if r["slot_type"] != "starters"]
-                    bench_sorted.sort(key=lambda x: x.get("_orig_idx", 0))
+                    bench_sorted.sort(key=lambda x: int(x.get("_orig_idx") or 0))
                     ordered = starters_sorted + bench_sorted
 
                     for r in ordered:

@@ -22,11 +22,11 @@ class KORMTeam:
     abbreviation: str
     team_id: int
     strikes: int = 0
-    strike_weeks: List[int] = None
+    strike_weeks: List[int] | None = None
     eliminated: bool = False
     eliminated_week: Optional[int] = None
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if self.strike_weeks is None:
             self.strike_weeks = []
 
@@ -156,6 +156,8 @@ class KORMTracker:
 
         team = self.teams[team_name]
         team.strikes += 1
+        if team.strike_weeks is None:
+            team.strike_weeks = []
         team.strike_weeks.append(week)
 
         if team.strikes >= 2:
@@ -358,8 +360,8 @@ class KORMReportGenerator:
 
         # Eliminated teams
         eliminated = [t for t in self.tracker.teams.values() if t.eliminated]
-        for team in sorted(eliminated, key=lambda t: t.eliminated_week):
-            strike_history = ", ".join(f"W{w}" for w in team.strike_weeks)
+        for team in sorted(eliminated, key=lambda t: t.eliminated_week or 0):
+            strike_history = ", ".join(f"W{w}" for w in (team.strike_weeks or []))
             lines.append(
                 f"| **{team.name}** | {team.status_emoji} | **{team.status}** | {strike_history} |"
             )

@@ -60,7 +60,8 @@ class LiveScoreClient:
             raise LiveScoringError(f"HTTP request failed: {exc.reason}") from exc
 
         try:
-            return json.loads(payload.decode("utf-8"))
+            result: dict[str, Any] = json.loads(payload.decode("utf-8"))
+            return result
         except json.JSONDecodeError as exc:  # pragma: no cover - invalid payload scenario
             raise LiveScoringError("Failed to parse JSON payload") from exc
 
@@ -212,7 +213,7 @@ def build_scoreboard_table(
 
 def _format_team(entry: dict[str, Any], team_lookup: dict[int, dict[str, Any]]) -> str:
     team_id = entry.get("teamId")
-    team = team_lookup.get(team_id, {})
+    team = team_lookup.get(team_id, {}) if team_id is not None else {}
     name = team.get("name") or f"Team {team_id}"
     abbrev = team.get("abbrev")
     if abbrev:
@@ -274,7 +275,9 @@ def _print_boxscore_summary(
             team_label = _format_team(team_entry, team_lookup)
             console.print(f"  [green]{team_label}[/green]")
 
-            entries = rosters.get(team_id) or []
+            entries = rosters.get(team_id) if team_id is not None else []
+            if entries is None:
+                entries = []
             if not entries:
                 console.print("    [yellow]No roster data available.[/yellow]")
                 continue

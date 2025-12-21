@@ -3,7 +3,7 @@
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
+import pandas as pd  # type: ignore[import-untyped]
 
 from .constants import FLEX_ELIGIBLE_POSITIONS, RFFL_LINEUP_REQUIREMENTS
 from .exceptions import LineupValidationError

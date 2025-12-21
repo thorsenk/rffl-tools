@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
+import pandas as pd  # type: ignore[import-untyped]
 import yaml
 
 from .constants import BENCH_SLOTS, FLEX_ELIGIBLE_POSITIONS, STARTER_SLOTS
@@ -52,11 +52,16 @@ def get_team_abbrev(team: Any) -> str:
     # Try different possible attribute names for team abbreviation
     for attr in ["abbrev", "team_abbrev", "abbreviation", "team_id", "name"]:
         if hasattr(team, attr):
-            value = getattr(team, attr)
+            value: Any = getattr(team, attr)
             if value and isinstance(value, str):
-                return value
+                str_value: str = value
+                return str_value
     # Fallback to team name if no abbreviation found
-    return getattr(team, "name", "Unknown")
+    name = getattr(team, "name", None)
+    if name is not None:
+        result: str = str(name)
+        return result
+    return "Unknown"
 
 
 def load_alias_index(mapping_path: str | Path) -> dict[str, list[dict]]:
@@ -76,7 +81,7 @@ def load_alias_index(mapping_path: str | Path) -> dict[str, list[dict]]:
         return {}
 
 
-def resolve_canonical(abbrev: str, year: int | None, idx: dict) -> str:
+def resolve_canonical(abbrev: str, year: int | None, idx: dict[str, list[dict[str, Any]]]) -> str:
     """Resolve canonical team code from alias."""
     rules = idx.get(abbrev)
     if not rules:
@@ -84,54 +89,36 @@ def resolve_canonical(abbrev: str, year: int | None, idx: dict) -> str:
     if year is None:
         for r in rules:
             if not r.get("start_year") and not r.get("end_year"):
-                return r.get("canonical", abbrev)
-        return rules[0].get("canonical", abbrev)
+                canonical = r.get("canonical")
+                return str(canonical) if canonical else abbrev
+        canonical = rules[0].get("canonical")
+        return str(canonical) if canonical else abbrev
     for r in rules:
         s = r.get("start_year")
         e = r.get("end_year")
         if (s is None or year >= int(s)) and (e is None or year <= int(e)):
-            return r.get("canonical", abbrev)
-    return rules[0].get("canonical", abbrev)
+            canonical = r.get("canonical")
+            return str(canonical) if canonical else abbrev
+    canonical = rules[0].get("canonical")
+    return str(canonical) if canonical else abbrev
 
 
 def load_canonical_meta(repo_root: Path | None = None) -> dict[tuple[int, str], dict]:
-    """Load canonical team metadata keyed by (year, team_code)."""
-    if repo_root is None:
-        # Try to find repo root
-        current = Path.cwd()
-        for parent in [current, *current.parents]:
-            if (parent / "pyproject.toml").exists():
-                repo_root = parent
-                break
-        if repo_root is None:
-            return {}
-
-    path = repo_root / "data" / "teams" / "canonical_teams.csv"
+    """
+    Load canonical team metadata keyed by (year, team_code).
+    
+    Uses RFFL_REG_TEAMS_001 (Python registry) as the Source of Truth.
+    The repo_root parameter is kept for backward compatibility but is no longer used.
+    """
+    from .registry import REGISTRY
+    
     meta: dict[tuple[int, str], dict] = {}
-    if not path.exists():
-        return meta
-
-    import csv as csv_module
-
-    with open(path, newline="", encoding="utf-8") as f:
-        r = csv_module.DictReader(f)
-        for row in r:
-            try:
-                y = int((row.get("season_year") or "").strip())
-            except Exception:
-                continue
-            code = (row.get("team_code") or "").strip()
-            if not y or not code:
-                continue
-            meta[(y, code)] = {
-                "team_full_name": (row.get("team_full_name") or "").strip(),
-                "is_co_owned": (row.get("is_co_owned") or "").strip(),
-                "owner_code_1": (
-                    row.get("owner_code_1") or row.get("owner_code") or ""
-                ).strip(),
-                "owner_code_2": (
-                    row.get("owner_code_2") or row.get("co_owner_code") or ""
-                ).strip(),
-            }
+    for team in REGISTRY:
+        meta[(team.season_year, team.team_code)] = {
+            "team_full_name": team.team_full_name,
+            "is_co_owned": "Yes" if team.is_co_owned else "No",
+            "owner_code_1": team.owner_code_1,
+            "owner_code_2": team.owner_code_2 or "",
+        }
     return meta
 

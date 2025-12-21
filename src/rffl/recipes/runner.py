@@ -4,6 +4,7 @@ import json
 import shutil
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
@@ -177,7 +178,7 @@ class RecipeRunner:
                     if recipe.type == "export":
                         start_week = recipe.weeks.start if recipe.weeks else None
                         end_week = recipe.weeks.end if recipe.weeks else None
-                        flags = recipe.flags if hasattr(recipe.flags, "fill_missing_slots") else {}
+                        flags: Any = recipe.flags if hasattr(recipe.flags, "fill_missing_slots") else {}
                         
                         export_boxscores(
                             league_id=recipe.league,
@@ -255,8 +256,8 @@ class RecipeRunner:
         # Run data validation
         if recipe.post.validate:
             try:
-                flags = recipe.flags if hasattr(recipe.flags, "tolerance") else {}
-                tolerance = getattr(flags, "tolerance", 0.0)
+                validate_flags: Any = recipe.flags if hasattr(recipe.flags, "tolerance") else {}
+                tolerance = getattr(validate_flags, "tolerance", 0.0)
                 result = validate_boxscores(output_path, tolerance=tolerance)
 
                 validation_log = run_dir / "validation.log"

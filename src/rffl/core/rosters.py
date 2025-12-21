@@ -4,8 +4,8 @@ import csv
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
-import pandas as pd
-import requests
+import pandas as pd  # type: ignore[import-untyped]
+import requests  # type: ignore[import-untyped]
 
 from .api import ESPNCredentials
 from .exceptions import ESPNAPIError

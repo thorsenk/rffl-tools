@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import Any
 
-from espn_api.football import League
+from espn_api.football import League  # type: ignore[import-untyped]
 
 from .exceptions import ESPNAPIError, AuthenticationError
 
@@ -70,7 +70,8 @@ class ESPNClient:
         """Fetch boxscores for a specific week."""
         league = self.get_league()
         try:
-            return league.box_scores(week)
+            result: list[Any] = league.box_scores(week)
+            return result
         except Exception as e:
             raise ESPNAPIError(f"Failed to fetch boxscores for week {week}: {e}") from e
 
@@ -78,7 +79,8 @@ class ESPNClient:
         """Fetch draft picks."""
         league = self.get_league()
         try:
-            return league.draft
+            result: list[Any] = league.draft
+            return result
         except Exception as e:
             raise ESPNAPIError(f"Failed to fetch draft: {e}") from e
 

@@ -5,8 +5,8 @@ from dataclasses import asdict, dataclass
 from datetime import datetime
 from pathlib import Path
 
-import requests
-from espn_api.football import League
+import requests  # type: ignore[import-untyped]
+from espn_api.football import League  # type: ignore[import-untyped]
 
 from .api import ESPNCredentials
 from .exceptions import ESPNAPIError
